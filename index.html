@@ -11,13 +11,33 @@
   <title>Document</title>
 </head>
 
-<body>
-  <div class="container">
+<body style="background-color: rgb(227, 250, 223)">
+
+  <div style="float:right; padding: 20px">
+    <img width="40px" src="img/hashtag.png" alt="C#">
+    <img width="40px" src="img/java.png" alt="java">
+    <img width="40px" src="img/javascript.png" alt="javascript">
+    <img width="40px" src="img/nodejs.png" alt="nodejs">
+    <img width="40px" src="img/physics.png" alt="react">
+    <img width="40px" src="img/html.png" alt="html">
+    <img width="40px" src="img/css.png" alt="css">
+  </div>
+  <div style="margin-bottom:30px; padding: 25px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); 
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;">
+    <h6>Programming Language Suggester</h6>
+  </div>
+
+
+  <div class="container-fluid scrollable">
     <div class="row">
-      <h1 style="text-align: center;">Programming Language Suggester</h1>
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="card">
           <div class="card-body">
+            <h5 class="card-title">Survey:</h5>
+            <p>Please answer the following questions to determine which language is best for you.</p>
             <form>
               <h6>Do you enjoy problem solving?</h6>
               <input type="radio" value="A" name="problem-solving" id="yesSolve">
@@ -35,65 +55,90 @@
               <input type="radio" value="C" name="art-design" id="mayDesign">
               <label for="mayDesign">A. Maybe</label><br>
 
-              <h6>Are comfortable leanging several languages?</h6>
+              <h6>Are you comfortable learning several programming languages?</h6>
               <input type="radio" value="A" name="serverallang" id="yesSeveral">
               <label for="yesSeveral">A. Yes</label><br>
               <input type="radio" value="A" name="serverallang" id="noSeveral">
               <label for="noSeveral">A. No</label><br>
               <input type="radio" value="A" name="serverallang" id="maySeveral">
               <label for="maySeveral">A. Maybe</label><br>
+
+              <h6>Do you like web application development?</h6>
+              <input type="radio" value="A" name="web" id="yesWeb">
+              <label for="yesWeb">A. Yes</label><br>
+              <input type="radio" value="B" name="web" id="noWeb">
+              <label for="noWeb">A. No</label><br>
+              <input type="radio" value="C" name="web" id="mayWeb">
+              <label for="mayWeb">A. Maybe</label><br>
+
+              <h6>Do you enjoy drinking coffee?</h6>
+              <input type="radio" value="A" name="coffee" id="yesCoffee">
+              <label for="yesCoffee">A. Yes</label><br>
+              <input type="radio" value="A" name="coffee" id="noCoffee">
+              <label for="noCoffee">A. No</label><br>
+              <input type="radio" value="A" name="coffee" id="mayCoffee">
+              <label for="mayCoffee">A. Maybe</label><br>
+
+              <h6>Do you prefer learning few programming launguages</h6>
+              <input type="radio" value="A" name="fewlang" id="yesFew">
+              <label for="yesFew">A. Yes</label><br>
+              <input type="radio" value="A" name="fewlang" id="noFew">
+              <label for="noFew">A. No</label><br>
+              <input type="radio" value="A" name="fewlang" id="mayFew">
+              <label for="mayFew">A. Maybe</label><br>
+
               <div class="text-center">
-                <input class="btn btn-success" type="submit" value="submitAnswer">
+                <input class="btn btn-success" type="submit" value="Submit">
               </div>
 
             </form>
+
+            <div class="output">
+              <div id="html" class="language">
+                <h3>Language suggested: Html</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                  into
+                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                  release
+                  of
+                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                  like
+                  Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+              <div id="css" class="language">
+                <h3>Language suggested: CSS</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                  into
+                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                  release
+                  of
+                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                  like
+                  Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+              <div id="javascript" class="language">
+                <h3>language suggested: javaScript</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                  into
+                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                  release
+                  of
+                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                  like
+                  Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card" style="display: none;">
-          <div class="card-body">
-            <div id="html" class="language">
-              <h3>Language suggested: Html</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release
-                of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div id="css" class="language">
-              <h1>Language suggested: CSS</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release
-                of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div id="javascript" class="language">
-              <h1>language suggested: javaScript</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release
-                of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-          </div>
 
-        </div>
-
-      </div>
     </div>
   </div>
 

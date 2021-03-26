@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   $("form").submit(function (event) {
     event.preventDefault();
     const yesSolve = document.getElementById("yesSolve").checked;
@@ -11,12 +10,20 @@ $(document).ready(function () {
     const yesSeveral = document.getElementById("yesSeveral").checked;
     const noSeveral = document.getElementById("noSeveral").checked;
     const maySeveral = document.getElementById("maySeveral").checked;
+    const yesWeb = document.getElementById("yesWeb").checked;
+    const noWeb = document.getElementById("noWeb").checked;
+    const mayWeb = document.getElementById("mayWeb").checked;
+    const yesCoffee = document.getElementById("yesCoffee").checked;
+    const noCoffee = document.getElementById("noCoffee").checked;
+    const mayCoffee = document.getElementById("mayCoffee").checked;
 
     if (yesSolve && yesDesign && yesSeveral) {
-      $("#html").sow();
+      $("form").hide();
+      $("#html").show();
       $("#css").show();
       $("#javascript").show();
       $(".card").show();
     }
   });
 });
+
