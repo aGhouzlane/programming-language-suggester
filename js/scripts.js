@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
-    const yesSolve = document.getElementById("yesSolve").checked;
+    let yesSolve = document.getElementById("yesSolve").checked;
     const noSolve = document.getElementById("noSolve").checked;
     const maySolve = document.getElementById("maySolve").checked;
     const yesDesign = document.getElementById("yesDesign").checked;
@@ -22,8 +22,16 @@ $(document).ready(function () {
       $("#html").show();
       $("#css").show();
       $("#javascript").show();
-      $(".card").show();
+      $("#output").show();
     }
   });
+
+  $("#takeSurveyAgain").click(function () {
+    $(".unchecked").prop("checked", false);
+    $("#output").hide();
+    $("form").show();
+  });
+
+
 });
 
