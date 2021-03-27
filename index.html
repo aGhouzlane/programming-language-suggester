@@ -9,20 +9,178 @@
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <title>Document</title>
+
+  <style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      /* Center the DIV horizontally */
+    }
+
+    .fixed-header {
+      width: 100%;
+      position: fixed;
+      background: rgb(11, 34, 57);
+      padding: 10px 0;
+      color: rgb(187, 245, 201);
+      box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 10px 10px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc;
+    }
+
+    .fixed-header {
+      top: 0;
+    }
+
+    /* Some more styles to beutify this example */
+    nav a {
+      text-decoration: none;
+      padding: 7px 25px;
+      display: inline-block;
+    }
+  </style>
 </head>
 
-<body style="background-color: rgb(227, 250, 223)">
-
-  <div style="float:right; padding: 20px">
-    <img width="40px" src="img/hashtag.png" alt="C#">
-    <img width="40px" src="img/java.png" alt="java">
-    <img width="40px" src="img/javascript.png" alt="javascript">
-    <img width="40px" src="img/nodejs.png" alt="nodejs">
-    <img width="40px" src="img/physics.png" alt="react">
-    <img width="40px" src="img/html.png" alt="html">
-    <img width="40px" src="img/css.png" alt="css">
+<body style="background: rgb(227, 250, 223); font-family: Comic Sans MS, Comic Sans, cursive;">
+  <div class="fixed-header">
+    <div style="float:right; padding-top: 10px; padding-right: 10px;">
+      <img style="padding-right: 10px;" width="40px" src="img/hashtag.png" alt="C#">
+      <img style="padding-right: 10px;" width="40px" src="img/java.png" alt="java">
+      <img style="padding-right: 10px;" width="40px" src="img/javascript.png" alt="javascript">
+      <img style="padding-right: 10px;" width="40px" src="img/nodejs.png" alt="nodejs">
+      <img style="padding-right: 10px;" width="40px" src="img/physics.png" alt="react">
+      <img style="padding-right: 10px;" width="40px" src="img/html.png" alt="html">
+      <img style="padding-right: 10px;" width="40px" src="img/css.png" alt="css">
+    </div>
+    <div class="container-fluid">
+      <nav>
+        <h6 style="padding:10px;"><strong>Programming Language Suggester</strong></h6>
+      </nav>
+    </div>
   </div>
-  <div style="margin-bottom:20px; padding: 25px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); 
+  <div class="container-fluid">
+    <div style="background-color: lavender; margin-bottom: 10px; margin-top:20px">
+      <div class="card-body">
+        <h5 class="card-title">Survey:</h5>
+        <p>Please answer the following questions to determine which language is best for you.</p>
+        <form>
+          <h6><strong>Do you enjoy problem solving?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="problem-solving" id="yesSolve">
+          <label class="f-size" for="yesSolve">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="B" name="problem-solving" id="noSolve">
+          <label class="f-size" for="noSolve">b. No</label><br>
+          <input class="unchecked" type="radio" value="C" name="problem-solving" id="maySolve">
+          <label class="f-size" for="maybeSolve">c. Maybe</label><br>
+
+          <h6><strong>Do you like art and design?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="art-design" id="yesDesign">
+          <label class="f-size" for="yesDesign">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="B" name="art-design" id="noDesign">
+          <label class="f-size" for="noDesign">b. No</label><br>
+          <input class="unchecked" type="radio" value="C" name="art-design" id="mayDesign">
+          <label class="f-size" for="mayDesign">c. Maybe</label><br>
+
+          <h6><strong>Are you comfortable learning several programming languages?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="serverallang" id="yesSeveral">
+          <label class="f-size" for="yesSeveral">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="A" name="serverallang" id="noSeveral">
+          <label class="f-size" for="noSeveral">b. No</label><br>
+          <input class="unchecked" type="radio" value="A" name="serverallang" id="maySeveral">
+          <label class="f-size" for="maySeveral">c. Maybe</label><br>
+
+          <h6><strong>Do you like web application development?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="web" id="yesWeb">
+          <label class="f-size" for="yesWeb">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="B" name="web" id="noWeb">
+          <label class="f-size" for="noWeb">b. No</label><br>
+          <input class="unchecked" type="radio" value="C" name="web" id="mayWeb">
+          <label class="f-size" for="mayWeb">c. Maybe</label><br>
+
+          <h6><strong>you enjoy drinking coffee?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="coffee" id="yesCoffee">
+          <label class="f-size" for="yesCoffee">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="A" name="coffee" id="noCoffee">
+          <label class="f-size" for="noCoffee">b. No</label><br>
+          <input class="unchecked" type="radio" value="A" name="coffee" id="mayCoffee">
+          <label class="f-size" for="mayCoffee">c. Maybe</label><br>
+
+          <h6><strong>you prefer learning few programming launguages</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="fewlang" id="yesFew">
+          <label class="f-size" for="yesFew">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="A" name="fewlang" id="noFew">
+          <label class="f-size" for="noFew">b. No</label><br>
+          <input class="unchecked" type="radio" value="A" name="fewlang" id="mayFew">
+          <label class="f-size" for="mayFew">c. Maybe</label><br>
+
+          <div class="text-center">
+            <input class="btn btn-success" type="submit" value="Submit">
+          </div>
+
+        </form>
+
+        <div id="output">
+          <div id="html" class="language">
+            <h3>Language suggested: Html</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+              into
+              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+              release
+              of
+              Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+              like
+              Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+          <div id="css" class="language">
+            <h3>Language suggested: CSS</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+              into
+              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+              release
+              of
+              Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+              like
+              Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+          <div id="javascript" class="language">
+            <h3>language suggested: javaScript</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+              into
+              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+              release
+              of
+              Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+              like
+              Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+          <div class="text-center">
+            <input id="takeSurveyAgain" class="btn btn-success" type="submit" value="Take survey again">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div
+    style="margin-bottom:-40px; padding: 15px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); text-align: center;">
+    &copy; 2021. Website created by Ahmed Ghouzlane. All Rights Reserved.
+  </div>
+  <!--
+
+  <div style="position: fixed; margin-bottom:20px; padding: 25px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); 
   box-shadow: 10px 10px 5px #ccc;
   -moz-box-shadow: 10px 10px 5px #ccc;
   -webkit-box-shadow: 10px 10px 5px #ccc;
@@ -30,123 +188,11 @@
     <h6>Programming Language Suggester</h6>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div style="background-color: lavender; margin-bottom: 20px;" class="card">
-          <div class="card-body">
-            <h5 class="card-title">Survey:</h5>
-            <p>Please answer the following questions to determine which language is best for you.</p>
-            <form>
-              <h6>Do you enjoy problem solving?</h6>
-              <input class="unchecked" type="radio" value="A" name="problem-solving" id="yesSolve">
-              <label for="yesSolve">a. Yes</label><br>
-              <input class="unchecked" type="radio" value="B" name="problem-solving" id="noSolve">
-              <label for="noSolve">b. No</label><br>
-              <input class="unchecked" type="radio" value="C" name="problem-solving" id="maySolve">
-              <label for="maybeSolve">c. Maybe</label><br>
+  
+ 
 
-              <h6>Do you like art and design?</h6>
-              <input class="unchecked" type="radio" value="A" name="art-design" id="yesDesign">
-              <label for="yesDesign">a. Yes</label><br>
-              <input class="unchecked" type="radio" value="B" name="art-design" id="noDesign">
-              <label for="noDesign">b. No</label><br>
-              <input class="unchecked" type="radio" value="C" name="art-design" id="mayDesign">
-              <label for="mayDesign">c. Maybe</label><br>
 
-              <h6>Are you comfortable learning several programming languages?</h6>
-              <input class="unchecked" type="radio" value="A" name="serverallang" id="yesSeveral">
-              <label for="yesSeveral">a. Yes</label><br>
-              <input class="unchecked" type="radio" value="A" name="serverallang" id="noSeveral">
-              <label for="noSeveral">b. No</label><br>
-              <input class="unchecked" type="radio" value="A" name="serverallang" id="maySeveral">
-              <label for="maySeveral">c. Maybe</label><br>
-
-              <h6>Do you like web application development?</h6>
-              <input class="unchecked" type="radio" value="A" name="web" id="yesWeb">
-              <label for="yesWeb">a. Yes</label><br>
-              <input class="unchecked" type="radio" value="B" name="web" id="noWeb">
-              <label for="noWeb">b. No</label><br>
-              <input class="unchecked" type="radio" value="C" name="web" id="mayWeb">
-              <label for="mayWeb">c. Maybe</label><br>
-
-              <h6>Do you enjoy drinking coffee?</h6>
-              <input class="unchecked" type="radio" value="A" name="coffee" id="yesCoffee">
-              <label for="yesCoffee">a. Yes</label><br>
-              <input class="unchecked" type="radio" value="A" name="coffee" id="noCoffee">
-              <label for="noCoffee">b. No</label><br>
-              <input class="unchecked" type="radio" value="A" name="coffee" id="mayCoffee">
-              <label for="mayCoffee">c. Maybe</label><br>
-
-              <h6>Do you prefer learning few programming launguages</h6>
-              <input class="unchecked" type="radio" value="A" name="fewlang" id="yesFew">
-              <label for="yesFew">a. Yes</label><br>
-              <input class="unchecked" type="radio" value="A" name="fewlang" id="noFew">
-              <label for="noFew">b. No</label><br>
-              <input class="unchecked" type="radio" value="A" name="fewlang" id="mayFew">
-              <label for="mayFew">c. Maybe</label><br>
-
-              <div class="text-center">
-                <input class="btn btn-success" type="submit" value="Submit">
-              </div>
-
-            </form>
-
-            <div id="output">
-              <div id="html" class="language">
-                <h3>Language suggested: Html</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into
-                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release
-                  of
-                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                  like
-                  Aldus PageMaker including versions of Lorem Ipsum.</p>
-              </div>
-              <div id="css" class="language">
-                <h3>Language suggested: CSS</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into
-                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release
-                  of
-                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                  like
-                  Aldus PageMaker including versions of Lorem Ipsum.</p>
-              </div>
-              <div id="javascript" class="language">
-                <h3>language suggested: javaScript</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into
-                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release
-                  of
-                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                  like
-                  Aldus PageMaker including versions of Lorem Ipsum.</p>
-              </div>
-              <div class="text-center">
-                <input id="takeSurveyAgain" class="btn btn-success" type="submit" value="Take survey again">
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div style="padding: 25px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); text-align: center;">
-    &copy; 2021. Website created by Ahmed Ghouzlane. All Rights Reserved.
-  </div>
-
+  -->
 
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
