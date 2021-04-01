@@ -1,7 +1,6 @@
 # Programming Language Suggester
 
-#### Pragramming language suggester is a web application that matches users with the languages that are a best fit for them based 
-#### on the answers the users provided. 
+#### Pragramming language suggester is a web application that matches users with the languages that are a best fit for them based on the answers the users provided. 
 
 #### By Ahmed Ghouzlane
 
