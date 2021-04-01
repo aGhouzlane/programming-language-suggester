@@ -14,4 +14,41 @@ h3{
   color: rgb(48, 77, 6);
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.fixed-header {
+  width: 100%;
+  position: fixed;
+  background: rgb(11, 34, 57);
+  padding: 10px 0;
+  color: rgb(187, 245, 201);
+}
+
+.fixed-header {
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 7px 25px;
+  display: inline-block;
+}
+.logos { 
+  float:right; 
+  padding-top: 10px; 
+  padding-right: 10px;
+}
+
+.titled{
+  background-color: lavender; 
+  margin-top:80px;
+}
+
+.bPosition{
+  float:right; 
+  margin-top: -30px;
+}
 
