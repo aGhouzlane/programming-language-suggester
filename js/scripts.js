@@ -23,7 +23,7 @@ $(document).ready(function () {
     const noServer = document.getElementById("noServer").checked;
     const mayServer = document.getElementById("mayServer").checked;
 
-
+    //All answers are yes
     if (yesSolve && yesDesign && yesSeveral && yesWeb && yesCoffee && yesBall && yesServer) {
       $(".language").hide();
       $("form").hide();
@@ -33,6 +33,7 @@ $(document).ready(function () {
       $("#output").show();
       $("#f-title").hide();
     }
+    //All answers are no
     else if (noSolve && noDesign && noSeveral && noWeb && noCoffee && noBall && noServer) {
       $(".language").hide();
       $("form").hide();
@@ -40,6 +41,7 @@ $(document).ready(function () {
       $("#output").show();
       $("#f-title").hide();
     }
+    //All answers are maybe
     else if (maySolve && mayDesign && maySeveral && mayWeb && mayCoffee && mayBall && mayServer) {
       $(".language").hide();
       $("form").hide();
@@ -97,7 +99,7 @@ $(document).ready(function () {
       $("#output").show();
       $("#f-title").hide();
     }
-    //Covers all cases
+    //To cover all answers cases
     else if ((yesSolve || noSolve || maySolve) && (yesDesign || mayDesign || noDesign) &&
       (yesSeveral || noSeveral || maySeveral) && (yesWeb || noWeb || mayWeb) && (mayCoffee || yesCoffee || noCoffee) &&
       (yesBall || noBall || mayBall) && (yesServer || noServer || mayServer)) {
@@ -110,6 +112,7 @@ $(document).ready(function () {
       $("#output").show();
       $("#f-title").hide();
     }
+    //Error: will show if the user tries to submit the form before completing it 
     else {
       $(".language").hide();
       $("form").hide();
@@ -118,7 +121,7 @@ $(document).ready(function () {
       $("#f-title").hide();
     }
   });
-
+  //Rest form
   $("#takeSurveyAgain").click(function () {
     $(".unchecked").prop("checked", false);
     $("#output").hide();
