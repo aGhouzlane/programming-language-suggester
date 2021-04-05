@@ -73,6 +73,43 @@ $(document).ready(function () {
       $("#output").show();
       $("#f-title").hide();
     }
+    else if ((yesSolve || noSolve || maySolve) && (yesDesign || mayDesign || noDesign) &&
+      (yesSeveral || noSeveral || maySeveral) && (yesWeb || noWeb || mayWeb) && mayCoffee && yesBall && yesServer) {
+      $(".language").hide();
+      $("form").hide();
+      $("#java").show();
+      $("#nodejs").show();
+      $("#csharp").show();
+      $("#html").show();
+      $("#css").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
+    else if ((yesSolve || noSolve || maySolve) && (yesDesign || mayDesign || noDesign) &&
+      (yesSeveral || noSeveral || maySeveral) && (yesWeb || noWeb || mayWeb) && (mayCoffee || yesCoffee || noCoffee) && (yesBall || noBall) && yesServer) {
+      $(".language").hide();
+      $("form").hide();
+      $("#typescript").show();
+      $("#nodejs").show();
+      $("#csharp").show();
+      $("#html").show();
+      $("#css").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
+    //Covers all cases
+    else if ((yesSolve || noSolve || maySolve) && (yesDesign || mayDesign || noDesign) &&
+      (yesSeveral || noSeveral || maySeveral) && (yesWeb || noWeb || mayWeb) && (mayCoffee || yesCoffee || noCoffee) &&
+      (yesBall || noBall || mayBall) && (yesServer || noServer || mayServer)) {
+      $(".language").hide();
+      $("form").hide();
+      $("#typescript").show();
+      $("#pyton").show();
+      $("#html").show();
+      $("#css").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
     else {
       $(".language").hide();
       $("form").hide();
