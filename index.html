@@ -13,10 +13,7 @@
   <style>
     /* Add some padding on document's body to prevent the content
     to go underneath the header and footer */
-    body {
-      padding-top: 60px;
-      padding-bottom: 40px;
-    }
+    body {}
 
     .container {
       width: 80%;
@@ -30,10 +27,6 @@
       background: rgb(11, 34, 57);
       padding: 10px 0;
       color: rgb(187, 245, 201);
-      box-shadow: 10px 10px 5px #ccc;
-      -moz-box-shadow: 10px 10px 5px #ccc;
-      -webkit-box-shadow: 10px 10px 5px #ccc;
-      -khtml-box-shadow: 10px 10px 5px #ccc;
     }
 
     .fixed-header {
@@ -49,7 +42,7 @@
   </style>
 </head>
 
-<body style="background: rgb(227, 250, 223); font-family: Comic Sans MS, Comic Sans, cursive;">
+<body>
   <div class="fixed-header">
     <div style="float:right; padding-top: 10px; padding-right: 10px;">
       <img style="padding-right: 10px;" width="40px" src="img/hashtag.png" alt="C#">
@@ -60,18 +53,22 @@
       <img style="padding-right: 10px;" width="40px" src="img/html.png" alt="html">
       <img style="padding-right: 10px;" width="40px" src="img/css.png" alt="css">
     </div>
-    <div class="container-fluid">
+    <div>
       <nav>
         <h6 style="padding:10px;"><strong>Programming Language Suggester</strong></h6>
       </nav>
     </div>
   </div>
-  <div class="container-fluid">
-    <div style="background-color: lavender; margin-bottom: 10px; margin-top:20px">
+  <div style="margin-top: 50px;" class="container">
+    <div style="background-color: lavender; margin-top:80px">
       <div class="card-body">
-        <h5 class="card-title">Survey:</h5>
-        <p>Please answer the following questions to determine which language is best for you.</p>
-        <form>
+        <div id="f-title">
+          <h5 class="card-title">Survey:</h5>
+          <p>Please answer the following questions to determine which language is best for you.</p>
+        </div>
+
+        <!--
+ <form id="question2">
           <h6><strong>Do you enjoy problem solving?</strong></h6>
           <input class="unchecked" type="radio" value="A" name="problem-solving" id="yesSolve">
           <label class="f-size" for="yesSolve">a. Yes</label><br>
@@ -120,11 +117,177 @@
           <input class="unchecked" type="radio" value="A" name="fewlang" id="mayFew">
           <label class="f-size" for="mayFew">c. Maybe</label><br>
 
-          <div class="text-center">
+          <div style="margin-left:300px;" class="app-button">
             <input class="btn btn-success" type="submit" value="Submit">
+            <input class="btn btn-success" type="submit" value="Next">
           </div>
 
         </form>
+
+
+        <form id="question1">
+          <h6><strong>I'm the second form!</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="problem-solving" id="yesSolve">
+          <label class="f-size" for="yesSolve">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="B" name="problem-solving" id="noSolve">
+          <label class="f-size" for="noSolve">b. No</label><br>
+          <input class="unchecked" type="radio" value="C" name="problem-solving" id="maySolve">
+          <label class="f-size" for="maybeSolve">c. Maybe</label><br>
+
+          <h6><strong>Do you like art and design?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="art-design" id="yesDesign">
+          <label class="f-size" for="yesDesign">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="B" name="art-design" id="noDesign">
+          <label class="f-size" for="noDesign">b. No</label><br>
+          <input class="unchecked" type="radio" value="C" name="art-design" id="mayDesign">
+          <label class="f-size" for="mayDesign">c. Maybe</label><br>
+
+          <h6><strong>Are you comfortable learning several programming languages?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="serverallang" id="yesSeveral">
+          <label class="f-size" for="yesSeveral">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="A" name="serverallang" id="noSeveral">
+          <label class="f-size" for="noSeveral">b. No</label><br>
+          <input class="unchecked" type="radio" value="A" name="serverallang" id="maySeveral">
+          <label class="f-size" for="maySeveral">c. Maybe</label><br>
+
+          <h6><strong>Do you like web application development?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="web" id="yesWeb">
+          <label class="f-size" for="yesWeb">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="B" name="web" id="noWeb">
+          <label class="f-size" for="noWeb">b. No</label><br>
+          <input class="unchecked" type="radio" value="C" name="web" id="mayWeb">
+          <label class="f-size" for="mayWeb">c. Maybe</label><br>
+
+          <h6><strong>you enjoy drinking coffee?</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="coffee" id="yesCoffee">
+          <label class="f-size" for="yesCoffee">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="A" name="coffee" id="noCoffee">
+          <label class="f-size" for="noCoffee">b. No</label><br>
+          <input class="unchecked" type="radio" value="A" name="coffee" id="mayCoffee">
+          <label class="f-size" for="mayCoffee">c. Maybe</label><br>
+
+          <h6><strong>you prefer learning few programming launguages</strong></h6>
+          <input class="unchecked" type="radio" value="A" name="fewlang" id="yesFew">
+          <label class="f-size" for="yesFew">a. Yes</label><br>
+          <input class="unchecked" type="radio" value="A" name="fewlang" id="noFew">
+          <label class="f-size" for="noFew">b. No</label><br>
+          <input class="unchecked" type="radio" value="A" name="fewlang" id="mayFew">
+          <label class="f-size" for="mayFew">c. Maybe</label><br>
+
+          <div style="margin-left:300px;" class="app-button">
+            <input class="btn btn-success" type="submit" value="Submit">
+            <input id="next" class="btn btn-success" type="submit" value="Next">
+          </div>
+
+        </form>
+
+
+        <form>
+          <div id="question1" class="hide">
+            
+          </div>
+          <div id="question2" class="hide">
+            
+          </div>
+          <div id="question3" class="hide">
+            
+          </div>
+          <div id="question4" class="hide">
+           
+          </div>
+          <div id="question5" class="hide">
+           
+          </div>
+          <div id="question6" class="hide">
+            
+          </div>
+
+          <div style="margin-left:300px;" class="app-button">
+            
+            <input id="next" class="btn btn-success" type="submit" value="Next">
+            <input id="previous" class="btn btn-success" type="submit" value="Previous">
+          </div>
+
+        </form>
+-->
+        <form>
+          <div style="margin-bottom:15px;" class="divs">
+
+            <div class="cls1">
+              <h6><strong>Do you enjoy problem solving?</strong></h6>
+              <input class="unchecked" type="radio" value="A" name="problem-solving" id="yesSolve">
+              <label class="f-size" for="yesSolve">a. Yes</label><br>
+              <input class="unchecked" type="radio" value="B" name="problem-solving" id="noSolve">
+              <label class="f-size" for="noSolve">b. No</label><br>
+              <input class="unchecked" type="radio" value="C" name="problem-solving" id="maySolve">
+              <label class="f-size" for="maybeSolve">c. Maybe</label><br>
+            </div>
+            <div class="cls2">
+              <h6><strong>Do you like art and design?</strong></h6>
+              <input class="unchecked" type="radio" value="A" name="art-design" id="yesDesign">
+              <label class="f-size" for="yesDesign">a. Yes</label><br>
+              <input class="unchecked" type="radio" value="B" name="art-design" id="noDesign">
+              <label class="f-size" for="noDesign">b. No</label><br>
+              <input class="unchecked" type="radio" value="C" name="art-design" id="mayDesign">
+              <label class="f-size" for="mayDesign">c. Maybe</label><br>
+            </div>
+            <div class="cls3">
+              <h6><strong>Are you comfortable learning several programming languages?</strong></h6>
+              <input class="unchecked" type="radio" value="A" name="serverallang" id="yesSeveral">
+              <label class="f-size" for="yesSeveral">a. Yes</label><br>
+              <input class="unchecked" type="radio" value="A" name="serverallang" id="noSeveral">
+              <label class="f-size" for="noSeveral">b. No</label><br>
+              <input class="unchecked" type="radio" value="A" name="serverallang" id="maySeveral">
+              <label class="f-size" for="maySeveral">c. Maybe</label><br>
+            </div>
+            <div class="cls4">
+              <h6><strong>Do you like web application development?</strong></h6>
+              <input class="unchecked" type="radio" value="A" name="web" id="yesWeb">
+              <label class="f-size" for="yesWeb">a. Yes</label><br>
+              <input class="unchecked" type="radio" value="B" name="web" id="noWeb">
+              <label class="f-size" for="noWeb">b. No</label><br>
+              <input class="unchecked" type="radio" value="C" name="web" id="mayWeb">
+              <label class="f-size" for="mayWeb">c. Maybe</label><br>
+            </div>
+            <div class="cls5">
+              <h6><strong>Do you enjoy drinking coffee?</strong></h6>
+              <input class="unchecked" type="radio" value="A" name="coffee" id="yesCoffee">
+              <label class="f-size" for="yesCoffee">a. Yes</label><br>
+              <input class="unchecked" type="radio" value="A" name="coffee" id="noCoffee">
+              <label class="f-size" for="noCoffee">b. No</label><br>
+              <input class="unchecked" type="radio" value="A" name="coffee" id="mayCoffee">
+              <label class="f-size" for="mayCoffee">c. Maybe</label><br>
+            </div>
+            <div class="cls6">
+              <h6><strong>Do you like basketball?</strong></h6>
+              <input class="unchecked" type="radio" value="A" name="fewlang" id="yesBall">
+              <label class="f-size" for="yesBall">a. Yes</label><br>
+              <input class="unchecked" type="radio" value="A" name="fewlang" id="noBall">
+              <label class="f-size" for="noBall">b. No</label><br>
+              <input class="unchecked" type="radio" value="A" name="fewlang" id="mayBall">
+              <label class="f-size" for="mayBall">c. Maybe</label><br>
+            </div>
+            <div class="cls7">
+              <h6><strong>Do you like to communicate with servers?</strong></h6>
+              <input class="unchecked" type="radio" value="A" name="mayServer" id="yesServer">
+              <label class="f-size" for="yesServer">a. Yes</label><br>
+              <input class="unchecked" type="radio" value="A" name="mayServer" id="noServer">
+              <label class="f-size" for="noServer">b. No</label><br>
+              <input class="unchecked" type="radio" value="A" name="mayServer" id="mayServer">
+              <label class="f-size" for="mayServer">c. Maybe</label><br>
+            </div>
+
+          </div>
+          <div style="float:right; margin-top: -30px;">
+            <a class="btn btn-success" id="prev">
+              < prev</a>
+                <a class="btn btn-success" id="next">
+                  next ></a>
+                <input id="submit" class="btn btn-success" type="submit" value="Submit">
+          </div>
+
+        </form>
+
 
         <div id="output">
           <div id="html" class="language">
@@ -166,19 +329,22 @@
               like
               Aldus PageMaker including versions of Lorem Ipsum.</p>
           </div>
+          <div style="text-align: center;" id="error" class="language">
+            <p><strong>Error! All survey questions must be completed before submiting!</strong></p>
+          </div>
           <div class="text-center">
             <input id="takeSurveyAgain" class="btn btn-success" type="submit" value="Take survey again">
           </div>
         </div>
 
       </div>
+
     </div>
-  </div>
-  <div
-    style="margin-bottom:-40px; padding: 15px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); text-align: center;">
-    &copy; 2021. Website created by Ahmed Ghouzlane. All Rights Reserved.
-  </div>
-  <!--
+    <div
+      style="margin-top:310px; padding: 15px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); text-align: center;">
+      &copy; 2021. Website created by Ahmed Ghouzlane. All Rights Reserved.
+    </div>
+    <!--
 
   <div style="position: fixed; margin-bottom:20px; padding: 25px; background-color: rgb(11, 34, 57); color: rgb(1, 167, 1); 
   box-shadow: 10px 10px 5px #ccc;
@@ -194,8 +360,8 @@
 
   -->
 
-  <script src="js/jquery-3.6.0.js"></script>
-  <script src="js/scripts.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
