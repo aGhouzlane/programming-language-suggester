@@ -24,7 +24,7 @@ $(document).ready(function () {
     const mayServer = document.getElementById("mayServer").checked;
 
 
-    if (yesSolve && yesDesign && yesSeveral) {
+    if (yesSolve && yesDesign && yesSeveral && yesWeb && yesCoffee && yesBall && yesServer) {
       $(".language").hide();
       $("form").hide();
       $("#html").show();
@@ -32,7 +32,48 @@ $(document).ready(function () {
       $("#javascript").show();
       $("#output").show();
       $("#f-title").hide();
-    } else {
+    }
+    else if (noSolve && noDesign && noSeveral && noWeb && noCoffee && noBall && noServer) {
+      $(".language").hide();
+      $("form").hide();
+      $("#nomatch").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
+    else if (maySolve && mayDesign && maySeveral && mayWeb && mayCoffee && mayBall && mayServer) {
+      $(".language").hide();
+      $("form").hide();
+      $("#javascript").show();
+      $("#csharp").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
+    else if (yesSolve && yesDesign && noSeveral && yesWeb && noCoffee && noBall && noServer) {
+      $(".language").hide();
+      $("form").hide();
+      $("#html").show();
+      $("#css").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
+    else if (yesSolve && mayDesign && noSeveral && yesWeb && yesCoffee && noBall && yeServer) {
+      $(".language").hide();
+      $("form").hide();
+      $("#java").show();
+      $("#nodejs").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
+    else if (yesSolve && mayDesign && yesSeveral && yesWeb && mayCoffee && yesBall && yesServer) {
+      $(".language").hide();
+      $("form").hide();
+      $("#java").show();
+      $("#nodejs").show();
+      $("#csharp").show();
+      $("#output").show();
+      $("#f-title").hide();
+    }
+    else {
       $(".language").hide();
       $("form").hide();
       $("#output").show();
@@ -48,7 +89,7 @@ $(document).ready(function () {
     $("#f-title").show();
   });
 
-
+  //To navigate between the questions
   $(".divs div").each(function (e) {
     if (e != 0)
       $(this).hide();
